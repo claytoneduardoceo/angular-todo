@@ -1,0 +1,127 @@
+body {
+  background: #40012A;
+  background: -moz-linear-gradient(60deg, #40012A 0%, #F24130 100%);
+  background: -webkit-linear-gradient(60deg, #40012A 0%, #F24130 100%);
+  background: linear-gradient(60deg, #40012A 0%, #F24130 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40012A');
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+li > button {
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  float: right;
+  opacity: 1;
+  transition: opacity 1s;
+  background-color: #F2F0EB;
+  border-radius: 5px;
+  color: #590242;
+  margin-inline: 2px;
+}
+
+#modal {
+  height: 20vh;
+  width: 40vh;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #F2F0EB;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+}
+
+fieldset{
+  border: none;
+}
+
+form>h1{
+  color: #590242;
+  font-size: 1em;
+}
+
+.danger {
+  color: #40012A;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+input{
+  width: 100%;
+  line-height: 30px;
+  text-indent: 10px;
+  font-size: 0.8em;
+  border-radius: 10px;
+  border: none;
+}
+
+.button {
+  border: none;
+  background: #F2522E;
+  padding: 8px;
+  margin-inline: 2px;
+  color: #590242;
+  border-radius: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonVariant {
+  border: none;
+  background: #590242;
+  padding: 8px;
+  margin-inline: 2px;
+  color: #F2F0EB;
+  border-radius: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.title {
+  color: #F2F0EB;
+  font-size: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+li > button:hover {
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+li {
+  list-style: none;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.ul {
+  height: 20vh;
+  width: 40vh;
+  align-content: center;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #F2F0EB;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+}

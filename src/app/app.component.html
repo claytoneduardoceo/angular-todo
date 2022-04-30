@@ -1,0 +1,83 @@
+<h1 class="title animated fadeIn">
+  <i class="fas fa-list-alt"></i> {{ title }}
+</h1>
+<ul class="ul animated flipInX" *ngIf="mode == 'list'">
+  <ul>
+    <p *ngIf="todos.length == 0">
+      <small>Você ainda não possui tarefas hoje.</small>
+    </p>
+    <li *ngFor="let todo of todos">
+      <a>
+        {{ todo.title }}
+      </a>
+      <button
+        title="Finalizar"
+        tex
+        class="animated fadeInRight"
+        (click)="markAsDone(todo)"
+        *ngIf="!todo.done"
+      >
+        <i class="fas fa-check"></i>
+      </button>
+      <button
+        title="Reiniciar"
+        class="animated fadeInLeft"
+        (click)="markAsUndo(todo)"
+        *ngIf="todo.done"
+      >
+        <i class="fa fa-redo"></i>
+      </button>
+      <button
+        title="Remover"
+        class="animated fadeInLeft"
+        (click)="remove(todo)"
+      >
+        <i class="fa fa-trash"></i>
+      </button>
+    </li>
+  </ul>
+</ul>
+
+<div id="modal" *ngIf="mode == 'add'" class="animated flipInY">
+  <form [formGroup]="form">
+    <h1 class="text-center"><i class="fa fa-plus"></i> Nova Tarefa</h1>
+    <fieldset>
+      <input
+        formControlName="title"
+        type="text"
+        maxlength="60"
+        placeholder="Título da Tarefa"
+      />
+      <small
+        class="danger"
+        *ngIf="
+          form.controls['title'].invalid && !form.controls['title'].pristine
+        "
+        >Este campo deve conter entre 6 e 60 caracteres<br
+      /></small>
+      <p class="text-center">
+        <button class="button" [disabled]="form.invalid" (click)="add()">
+          <i class="far fa-save"></i>
+          Salvar
+        </button>
+      </p>
+    </fieldset>
+  </form>
+</div>
+
+<button
+  class="add-button animated fadeInUp buttonVariant"
+  (click)="changeMod('add')"
+  *ngIf="mode == 'list'"
+>
+  <i class="fas fa-plus-circle"></i>
+  Adicionar
+</button>
+<button
+  class="add-button animated fadeInUp buttonVariant"
+  (click)="changeMod('list')"
+  *ngIf="mode == 'add'"
+>
+  <i class="fas fa-times"></i>
+  Cancelar
+</button>
